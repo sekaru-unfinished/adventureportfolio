@@ -1,0 +1,37 @@
+[
+  {
+    "id": "choose",
+    "title": "Tudor Sandulescu",
+    "desc": [
+      "This portfolio is meant to be a fun little adventure. If you just want all the good stuff quickly, you can do that too",
+      "Are you up for an adventure?"
+    ],
+    "commands": [
+      {
+        "text": "Let's go!",
+        "goto": "intro"
+      },
+      {
+        "text": "No, show me everything, quickly!",
+        "link": "http://tudr.xyz" 
+      }
+    ]
+  },
+  {
+    "id": "intro",
+    "title": "Crossroads",
+    "desc": [
+      "There seem to be four paths ahead of you, which one will you take?"
+    ],
+    "commands": [
+      {
+        "text": "Head towards the music and flashing lights",
+        "goto": "intro"
+      },
+      {
+        "text": "Go towards the factory",
+        "link": "http://tudr.xyz" 
+      }
+    ]
+  }
+]

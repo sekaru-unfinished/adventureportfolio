@@ -1,0 +1,103 @@
+p {
+  font-size: 1.5rem;
+}
+
+h1::after {
+  display: block;
+  content: '';
+  border: 1px dashed var(--primary);
+  width: 100%;
+  margin: 1em auto;
+}
+
+.adventure {
+  background: var(--secondary);
+  color: var(--primary);
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1em;
+}
+
+.adventureContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  animation: slidein 0.5s linear 0 1;
+}
+
+.control {
+  padding: 0.2em;
+  background: var(--primary);
+  color: var(--secondary);
+  border-radius: 6px;
+}
+
+.autocomplete {
+  width: 50vw;
+  background: var(--primary);
+
+  padding: 0.5em;
+  color: #222;
+
+  margin-top: -1px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.autocomplete > .command {
+  background-color: none;
+  transition: all 0.2s;
+  padding: 0.1em;
+}
+
+.autocomplete > .command:hover {
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 6px;
+}
+
+.noAutocomplete {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.choices {
+  width: 50vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 2em;
+
+  opacity: 0;
+  animation: fadein 0.5s linear 2s 1 forwards;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+  }
+
+  to  {
+    margin-top: 0%;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to  {
+    opacity: 1;
+  }
+}
